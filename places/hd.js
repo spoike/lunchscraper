@@ -25,6 +25,8 @@ var handleRestaurant = function(r) {
 exports.provider = {
 	enabled: true,
 	load: function() {
+		var date = new Date(), 
+			dateStr = date.getFullYear() + '-' + date.getMonth() + '-' + date.getDate();
 		request.post(
 			'http://hd.se/lunchguiden/menu.do', {
 				'form': {
