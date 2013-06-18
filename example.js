@@ -1,5 +1,4 @@
-var request = require('request');
-var cheerio = require('cheerio');
+var places = require('./places');
 var S = require('string');
 
 var i, place, lunchArr = [
@@ -44,21 +43,8 @@ var i, place, lunchArr = [
 			return allText;
 		}
 	}	
-], handlePlace = function(place, body) {
-	$ = cheerio.load(body);
-
-	console.log(place.header);
-	console.log(S('-').repeat(place.header.length).s);
-	console.log(place.scrape.call(body, $));
-}, requestPlace = function(place) {
-	request(place.url, function(err, resp, body) {
-		if (err) {
-			console.error(err);
-		}
-		handlePlace(place, body);
-	});	
-};
+];
 
 for (i = 0; i < lunchArr.length; i++) {
-	if (lunchArr[i].enabled) requestPlace(lunchArr[i]);
+	if (lunchArr[i].enabled) places.requestPlace(lunchArr[i]);
 }
