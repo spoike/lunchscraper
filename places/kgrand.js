@@ -1,4 +1,5 @@
 var S = require('string');
+var utils = require('../app/utils');
 
 exports.place = {
 	enabled: true,
@@ -11,6 +12,6 @@ exports.place = {
 			text = S(text).replaceAll(/([A-Z][\wåäö]{5,6}\s[0-9]{2}\/[0-9])/g, '\n');
 			allText += text;
 		});
-		return allText;
+		return utils.removeEmptyLines(allText);
 	}
 };

@@ -1,3 +1,5 @@
+var utils = require('../app/utils');
+
 exports.place = {
 	enabled: true,
 	url: 'http://www.inom-matbar.se/lunch.php',
@@ -8,6 +10,6 @@ exports.place = {
 			var text = this.text();
 			allText += text;
 		});
-		return allText;
+		return utils.removeEmptyLines(allText);
 	}
 };
