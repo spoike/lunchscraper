@@ -44,16 +44,18 @@ var i, place, lunchArr = [
 			return allText;
 		}
 	}	
-], requestPlace = function(place) {
+], handlePlace = function(place, body) {
+	$ = cheerio.load(body);
+
+	console.log(place.header);
+	console.log(S('-').repeat(place.header.length).s);
+	console.log(place.scrape.call(body, $));
+}, requestPlace = function(place) {
 	request(place.url, function(err, resp, body) {
 		if (err) {
 			console.error(err);
 		}
-		$ = cheerio.load(body);
-
-		console.log(place.header);
-		console.log(S('-').repeat(place.header.length).s);
-		console.log(place.scrape.call(body, $));
+		handlePlace(place, body);
 	});	
 };
 
