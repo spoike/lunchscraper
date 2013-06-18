@@ -18,3 +18,23 @@ exports.requestPlace = function(place) {
 		exports.handlePlace(place, body);
 	});	
 };
+
+exports.handlePlaces = function(placesArr, body) {
+	var i, place;
+	for (i = 0; i < placesArr.length; i++) {
+		place = placesArr[i];
+		if (place.enabled) {
+			exports.handlePlace(place, body);
+		}
+	}	
+};
+
+exports.requestPlaces = function(placesArr) {
+	var i, place;
+	for (i = 0; i < placesArr.length; i++) {
+		place = placesArr[i];
+		if (place.enabled) {
+			exports.requestPlace(place);
+		}
+	}	
+};

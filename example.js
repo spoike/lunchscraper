@@ -45,6 +45,4 @@ var i, place, lunchArr = [
 	}	
 ];
 
-for (i = 0; i < lunchArr.length; i++) {
-	if (lunchArr[i].enabled) places.requestPlace(lunchArr[i]);
-}
+places.requestPlaces(lunchArr);
