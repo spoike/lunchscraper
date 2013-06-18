@@ -7,7 +7,7 @@ exports.handlePlace = function(place, body) {
 
 	console.log(place.header);
 	console.log(S('-').repeat(place.header.length).s);
-	console.log(place.scrape.call(body, $));
+	console.log(place.scrape.call(body, $, body));
 };
 
 exports.requestPlace = function(place) {
