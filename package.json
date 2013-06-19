@@ -4,6 +4,7 @@
   "dependencies": {
     "string": "~1.4.0",
     "cheerio": "~0.12.0",
-    "request": "~2.21.0"
+    "request": "~2.21.0",
+    "celeri": "~0.3.2"
   }
 }

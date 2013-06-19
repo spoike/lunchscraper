@@ -1,7 +1,7 @@
-var places = require('./app/places'), placeArr = [], providerArr = [], module, i;
+var places = require('./places'), placeArr = [], providerArr = [], module, i;
 
 require('fs').readdirSync('./places').forEach(function(file) {
-	var filePath = './places/' + file;
+	var filePath = '../places/' + file;
 	console.log('Loading ' + filePath);
 	module = require(filePath);
 	if (!module) return;
