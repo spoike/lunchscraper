@@ -9,4 +9,6 @@ Scrape lunch menues and output it to text.
 3. Add your own scraper in the `places` folder
 4. Run with `node lunch.js scrape` to scrape
 
+You can also run one specific scraper: `node lunch.js scrape test` will load `places/test.js`.
+
 Enjoy!
