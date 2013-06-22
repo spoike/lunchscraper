@@ -7,5 +7,9 @@
     "cheerio": "~0.12.0",
     "request": "~2.21.0",
     "celeri": "~0.3.2"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.0"
   }
 }

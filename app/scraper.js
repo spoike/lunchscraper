@@ -38,4 +38,4 @@ exports.scrape = function(file) {
 	} else {
 		scrapeAll();
 	}
-}
+};
