@@ -1,4 +1,8 @@
-var places = require('./places'), fs = require('fs'), placeArr = [], providerArr = [], i;
+var places = require('./places'), 
+	fs = require('fs'), 
+	placeArr = [], 
+	providerArr = [],
+	each = require('./utils').each;
 
 var loadFile = function(file) {
 	var module, filePath = '../places/' + file;
@@ -12,15 +16,14 @@ var loadFile = function(file) {
 var scrapeLunches = function() {
 	places.requestPlaces(placeArr);
 
-	for(i = 0; i < providerArr.length; i++) {
-		var provider = providerArr[i];
+	each(providerArr, function(provider) {
 		if (provider.enabled) {
 			provider.load();
 		}
-	}
+	});
 };
 
-exports.scrapeAll = function() {
+var scrapeAll = function() {
 	fs.readdirSync('./places').forEach(function(file) {
 		loadFile(file);
 	});
@@ -33,6 +36,6 @@ exports.scrape = function(file) {
 		loadFile(file);
 		scrapeLunches();
 	} else {
-		exports.scrapeAll();
+		scrapeAll();
 	}
 }
