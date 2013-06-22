@@ -12,3 +12,7 @@ Scrape lunch menues and output it to text.
 You can also run one specific scraper: `node lunch.js scrape test` will load `places/test.js`.
 
 Enjoy!
+
+## License
+
+Lunchscraper is under [MIT license](http://opensource.org/licenses/MIT). Copyright (c) 2013 Mikael Brassman

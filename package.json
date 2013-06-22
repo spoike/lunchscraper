@@ -1,6 +1,7 @@
 {
   "name": "lunchscrape",
   "version": "0.1.0",
+  "license": "MIT",
   "dependencies": {
     "string": "~1.4.0",
     "cheerio": "~0.12.0",
