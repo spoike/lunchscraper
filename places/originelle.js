@@ -7,4 +7,4 @@ exports.place = {
 	scrape: function($, body) {
 		return utils.removeEmptyLines($('table table span').text());
 	}
-}
+};
