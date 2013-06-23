@@ -1,4 +1,4 @@
-var utils = require('../app/utils');
+var utils = require('../src/utils');
 
 exports.place = {
 	enabled: true,

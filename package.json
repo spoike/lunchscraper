@@ -1,7 +1,11 @@
 {
   "name": "lunchscrape",
+  "preferGlobal": true,
   "version": "0.1.0",
   "license": "MIT",
+  "bin" : {
+    "lunch" : "./lunch.js"
+  },
   "dependencies": {
     "string": "~1.4.0",
     "cheerio": "~0.12.0",
